@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Toll Management</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Toll Management</h1>
+        </div>
+        <form id="tollForm" class="form">
+            <div class="form-group">
+                <label for="vehicleRegNum" class="label">Vehicle Registration Number:</label>
+                <input type="text" id="vehicleRegNum" class="input" required>
+            </div>
+            <div class="form-group">
+                <label class="label">Select Vehicle Type:</label>
+                <label for="twoWheeler" class="radio-label">
+                    <input type="radio" id="twoWheeler" name="vehicleType" value="Two Wheeler" required> Two Wheeler
+                </label>
+                <label for="fourWheeler" class="radio-label">
+                    <input type="radio" id="fourWheeler" name="vehicleType" value="Four Wheeler" required> Four Wheeler
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="passType" class="label">Select Pass Type:</label>
+                <select id="passType" class="input" required>
+                    <option value="Single Pass">Single Pass</option>
+                    <option value="Return Pass">Return Pass</option>
+                    <option value="7-Day Pass">7-Day Pass</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Check</button>
+        </form>
+        
+        <div id="result" class="result"></div>
+        
+        <div id="leaderboard" class="leaderboard"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
